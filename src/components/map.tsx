@@ -5,14 +5,21 @@ import StaticMap from "react-map-gl";
 const MAPBOX_ACCESS_TOKEN = "";
 
 const INITIAL_VIEW_STATE = {
-  longitude: -122.42177834,
-  latitude: 37.78346622,
+  longitude: -122.41669,
+  latitude: 37.7853,
   zoom: 13,
   pitch: 0,
   bearing: 0,
 };
 
-export default function Home() {
+// Data to be used by the LineLayer
+const data = [
+  {
+    sourcePosition: [-122.41669, 37.7853],
+    targetPosition: [-122.41669, 37.781],
+  },
+];
+const MapComponent = () => {
   const iconLayer = new IconLayer({
     id: "IconLayer",
     data: "https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/bart-stations.json",
@@ -54,4 +61,6 @@ export default function Home() {
       ></StaticMap>
     </DeckGL>
   );
-}
+};
+
+export default MapComponent;
