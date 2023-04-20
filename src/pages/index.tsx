@@ -44,7 +44,7 @@ export default function Home() {
   const layers = [iconLayer];
 
   return (
-    <div style={{ width: "100vw", height: "100vh", backgroundColor: "red" }}>
+    <div style={{ width: "100vw", height: "100vh" }}>
       <DeckGL
         width="100%"
         height="100%"
